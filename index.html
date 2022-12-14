@@ -24,12 +24,10 @@
 
             <main class="container">
                 <div class="row p-3">
-                    <div class="col-6 d-flex justify-content-end">
-                        <button class="btn btn-warning" @click="userItemPush(newTodoItem)">
+                    <div class="col-6 d-flex justify-content-center">
+                        <button class="btn btn-warning me-3" @click="userItemPush(newTodoItem)">
                             Aggiungi un elemento
                         </button>
-                    </div>
-                    <div class="col-6 d-flex justify-content-start">
                         <input type="text" v-model="newTodoItem" @keyup.enter="userItemPush(newTodoItem)">
                     </div>
                 </div>
