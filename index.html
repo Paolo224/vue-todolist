@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <ul>
+                        <ul v-if="list.length > 0">
                             <li v-for="(element) in list" :class="(element.done === true) ? 'testo-sbarrato' : ''" @click="doneInverter(element)">
                                 {{element.text}}
                                 <span>
@@ -43,6 +43,15 @@
                                 </span>
                             </li>
                         </ul>
+                        <div v-else>
+                            </p>    
+                                OH NO!! <i class="fa-regular fa-face-sad-tear"></i> Il tuo carrello è vuoto!
+                            <p>
+                            <h2>
+                                RIEMPILO!
+                            </h2>
+                                
+                        </div>
                     </div>
                 </div>
             </main>
