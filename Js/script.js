@@ -3,6 +3,7 @@ const { crateApp } = Vue
 .createApp({
     data(){
         return {
+            newTodoItem : '',
             list : [
                 {
                     text : 'pane',
@@ -55,8 +56,13 @@ const { crateApp } = Vue
             if(itemIndex > -1){
                 this.list.splice(itemIndex, 1);
             } else{
-                console.warn('NOPE!')
+                console.warn('NOPE!');
             }
+        },
+
+        userItemPush(element){
+            this.list.push({ text : element , done : false,});
+            this.newTodoItem = '';
         }
     }
 }).mount('#app');
