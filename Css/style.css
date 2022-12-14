@@ -28,3 +28,8 @@ i:hover{
     color: red;
     cursor: pointer;
 }
+
+.testo-sbarrato{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
