@@ -49,6 +49,14 @@ const { crateApp } = Vue
     },
 
     methods : {
-        
+        removeItem(itemRemove){
+            const itemIndex = this.list.indexOf(itemRemove);
+
+            if(itemIndex > -1){
+                this.list.splice(itemIndex, 1);
+            } else{
+                console.warn('NOPE!')
+            }
+        }
     }
 }).mount('#app');
