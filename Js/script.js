@@ -66,11 +66,7 @@ const { crateApp } = Vue
         },
 
         doneInverter(element){
-            if(element.done === true){
-                element.done = false;
-            } else if(element.done === false){
-                element.done = true
-            }
+            element.done = !element.done;
         }
     }
 }).mount('#app');
