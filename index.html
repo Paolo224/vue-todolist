@@ -35,14 +35,17 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <ul v-if="list.length > 0">
-                            <li v-for="(element) in list" :class="(element.done === true) ? 'testo-sbarrato' : ''" @click="doneInverter(element)">
+                        <ul v-if="list.length > 0" class="d-flex flex-wrap">
+                            <li v-for="(element) in list" :class="(element.done === true) ? 'testo-sbarrato' : ''" @click="doneInverter(element)" class="w-50">
                                 {{element.text}}
                                 <span>
                                     <i class="fa-solid fa-trash-can" @click="removeItem(element)"></i>
                                 </span>
                             </li>
                         </ul>
+                        <h3 v-if="list.length > 0" class="modalita-uso">
+                            Clicca sul proddo per <span class="testo-sbarrato">barrarlo</span>, clicca sul cestino per eliminare il prodotto.
+                        </h3>
                         <div v-else>
                             </p>    
                                 OH NO!! <i class="fa-regular fa-face-sad-tear"></i> Il tuo carrello è vuoto!
