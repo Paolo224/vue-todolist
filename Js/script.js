@@ -63,6 +63,14 @@ const { crateApp } = Vue
         userItemPush(element){
             this.list.push({ text : element , done : false,});
             this.newTodoItem = '';
+        },
+
+        doneInverter(element){
+            if(element.done === true){
+                element.done = false;
+            } else if(element.done === false){
+                element.done = true
+            }
         }
     }
 }).mount('#app');

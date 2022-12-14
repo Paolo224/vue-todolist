@@ -25,7 +25,8 @@
             <main class="container">
                 <div class="row p-3">
                     <div class="col-6 d-flex justify-content-end">
-                        <button class="btn btn-warning" @click="userItemPush(newTodoItem)">
+                        <button class="btn btn-warning" @click="userItemPush(newTodoItem)"
+                        @keyup.enter="userItemPush(newTodoItem)">
                             Aggiungi un elemento
                         </button>
                     </div>
@@ -36,7 +37,7 @@
                 <div class="row">
                     <div class="col-12">
                         <ul>
-                            <li v-for="(element) in list" :class="(element.done === true) ? 'testo-sbarrato' : ''">
+                            <li v-for="(element) in list" :class="(element.done === true) ? 'testo-sbarrato' : ''" @click="doneInverter(element)">
                                 {{element.text}}
                                 <span>
                                     <i class="fa-solid fa-trash-can" @click="removeItem(element)"></i>
